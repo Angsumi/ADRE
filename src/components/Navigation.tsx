@@ -1,10 +1,48 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
 export function Navbar() {
+  const [isToolsOpen, setIsToolsOpen] = useState(false);
+
+  const toolsList = [
+    {
+      name: 'Score & Rank Calculator',
+      description: 'Calculate net score considering -0.25 negative marks & state rank.',
+      href: '/tools/score-calculator/',
+      icon: '🧮',
+    },
+    {
+      name: 'Eligibility & Post Checker',
+      description: 'Check post eligibility across all 5 official ADRE examination papers.',
+      href: '/tools/eligibility-checker/',
+      icon: '✅',
+    },
+    {
+      name: 'Study Planner & Timeline',
+      description: 'Generate customized daily preparation schedules.',
+      href: '/tools/study-planner/',
+      icon: '📅',
+    },
+    {
+      name: 'Interactive PYQ Vault',
+      description: 'Solve 1,226+ official PYQs or download 10 official PDF booklets.',
+      href: '/adre/previous-year-question-paper/',
+      icon: '📥',
+    },
+    {
+      name: 'All Tools Directory',
+      description: 'Explore the complete master directory of all free exam utilities.',
+      href: '/tools/',
+      icon: '🛠️',
+    },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-[#F4EFE6]/95 backdrop-blur-md border-b border-[#D8CEBE] shadow-sm">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Brand Logo with LOGO-2.png */}
+        {/* Brand Logo */}
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="w-10 h-10 rounded-xl overflow-hidden bg-transparent flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform">
             <img src="/ADRE/logo-2.png" alt="AxomRank Brand Logo" className="w-full h-full object-contain" />
@@ -21,7 +59,58 @@ export function Navbar() {
           <Link href="/adre/previous-year-question-paper/" className="hover:text-[#9E3A26] transition-colors">PYQ Vault</Link>
           <Link href="/adre/mock-test/" className="hover:text-[#9E3A26] transition-colors">Mock Tests</Link>
           <Link href="/assam-gk/" className="hover:text-[#9E3A26] transition-colors">Assam GK</Link>
-          <Link href="/tools/score-calculator/" className="hover:text-[#9E3A26] transition-colors">Calculators</Link>
+
+          {/* Tools Dropdown (Hover & Touch Support) */}
+          <div
+            className="relative"
+            onMouseEnter={() => setIsToolsOpen(true)}
+            onMouseLeave={() => setIsToolsOpen(false)}
+          >
+            <button
+              onClick={() => setIsToolsOpen(!isToolsOpen)}
+              className="flex items-center space-x-1 hover:text-[#9E3A26] transition-colors py-2 focus:outline-none"
+            >
+              <span>Tools</span>
+              <span className="text-[10px]">▼</span>
+            </button>
+
+            {/* Dropdown Menu Overlay */}
+            {isToolsOpen && (
+              <div className="absolute top-full right-0 sm:left-0 w-80 bg-[#F9F4EB] border border-[#E5DAC8] rounded-2xl shadow-xl p-3 space-y-2 z-50 normal-case font-sans">
+                <div className="px-3 py-1.5 border-b border-[#E5DAC8] flex items-center justify-between">
+                  <span className="font-mono text-[10px] uppercase font-bold tracking-wider text-[#9E3A26]">Free Exam Utilities</span>
+                  <Link
+                    href="/tools/"
+                    onClick={() => setIsToolsOpen(false)}
+                    className="font-mono text-[10px] uppercase text-[#A88244] hover:underline font-bold"
+                  >
+                    View All →
+                  </Link>
+                </div>
+
+                <div className="space-y-1">
+                  {toolsList.map((tool) => (
+                    <Link
+                      key={tool.href}
+                      href={tool.href}
+                      onClick={() => setIsToolsOpen(false)}
+                      className="flex items-start space-x-3 p-2.5 rounded-xl hover:bg-[#F3EDE2] transition-colors group"
+                    >
+                      <span className="text-lg">{tool.icon}</span>
+                      <div>
+                        <h4 className="text-xs font-bold text-[#1D1814] group-hover:text-[#9E3A26] transition-colors">
+                          {tool.name}
+                        </h4>
+                        <p className="text-[11px] text-[#6B5D52] line-clamp-1 leading-snug">
+                          {tool.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         {/* Top Right CTA */}
@@ -60,11 +149,13 @@ export function Footer() {
         </div>
 
         <div>
-          <h4 className="text-[#211915] font-bold uppercase tracking-wider mb-4">TEST MATRIX</h4>
+          <h4 className="text-[#211915] font-bold uppercase tracking-wider mb-4">TOOLS & TESTS</h4>
           <ul className="space-y-2.5">
-            <li><Link href="/adre/mock-test/" className="hover:text-[#9E3A26]">Mock Test Series</Link></li>
-            <li><Link href="/adre/previous-year-question-paper/" className="hover:text-[#9E3A26]">PYQ Vault</Link></li>
+            <li><Link href="/tools/" className="hover:text-[#9E3A26]">All Tools Directory</Link></li>
             <li><Link href="/tools/score-calculator/" className="hover:text-[#9E3A26]">Score Calculator</Link></li>
+            <li><Link href="/tools/eligibility-checker/" className="hover:text-[#9E3A26]">Eligibility Checker</Link></li>
+            <li><Link href="/tools/study-planner/" className="hover:text-[#9E3A26]">Study Planner</Link></li>
+            <li><Link href="/adre/mock-test/" className="hover:text-[#9E3A26]">Mock Test Series</Link></li>
           </ul>
         </div>
 
