@@ -116,6 +116,18 @@ export default function HomePage() {
             </span>
           </Link>
         </div>
+
+        {/* Dynamic Topic Directory Hub Banner */}
+        <div className="mt-8 p-8 border border-[#C9A468]/50 bg-[#F3EDE2] rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
+          <div>
+            <span className="font-mono text-xs text-[#9E3A26] font-bold uppercase tracking-wider">PROGRAMMATIC SEO ENGINE</span>
+            <h3 className="text-2xl font-normal text-[#1D1814] mt-1">200+ Topic Solvers & Subject Directory</h3>
+            <p className="text-sm text-[#6B5D52] mt-1 font-sans">Explore topic-wise solved PYQ banks covering Ahom Dynasty, Percentages, Antonyms, Scientific Instruments, and Assam Geography.</p>
+          </div>
+          <Link href="/adre/topics/" className="btn-ahom-primary whitespace-nowrap text-xs">
+            EXPLORE 200+ TOPICS →
+          </Link>
+        </div>
       </section>
 
       {/* SECTION 3: Minimalist Mock Series */}
