@@ -15,7 +15,7 @@ export default function HomePage() {
         {/* Full-width Morphed Ranghar Background Image with Golden Hour Sunshine Gradients */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/ranghar.jpg"
+            src="/ADRE/ranghar.jpg"
             alt="Rang Ghar Assam Golden Hour"
             className="w-full h-full object-contain object-top opacity-55 mix-blend-multiply filter contrast-[1.05] brightness-[1.02]"
           />

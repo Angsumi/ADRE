@@ -7,7 +7,7 @@ export function Navbar() {
         {/* Brand Logo with LOGO-2.png */}
         <Link href="/" className="flex items-center space-x-3 group">
           <div className="w-10 h-10 rounded-xl overflow-hidden bg-transparent flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform">
-            <img src="/logo-2.png" alt="AxomRank Brand Logo" className="w-full h-full object-contain" />
+            <img src="/ADRE/logo-2.png" alt="AxomRank Brand Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <span className="font-mono text-sm tracking-[0.2em] font-bold text-[#211915] uppercase">AXOMRANK</span>
