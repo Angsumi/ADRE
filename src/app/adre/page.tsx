@@ -14,85 +14,122 @@ export default function AdreHubPage() {
   ]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12 bg-[#F9F4EB]">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 bg-[#F9F4EB]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* Header */}
-      <header className="space-y-4 text-center sm:text-left">
-        <div className="inline-flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-[#9E3A26] bg-[#9E3A26]/10 px-3.5 py-1.5 rounded-lg border border-[#9E3A26]/20">
-          <span>Assam Competitive Exam Hub</span>
+      {/* Hero Hierarchical Container - Matching Mock Test Selector Aesthetics */}
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#E5DAC8] pb-6">
+          <div>
+            <span className="text-xs font-mono font-bold text-[#9E3A26] uppercase tracking-wider">Exam Category Overview</span>
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1814] mt-1">ADRE 3.0 Master Hub</h1>
+          </div>
+
+          <div className="inline-flex bg-[#EBE2D4] p-1 rounded-2xl border border-[#E5DAC8]">
+            <span className="px-5 py-2 text-xs font-mono font-extrabold bg-[#9E3A26] text-[#F9F4EB] rounded-xl shadow-md">
+              SLRC 2026 Standard
+            </span>
+          </div>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1D1814]">
-          ADRE 3.0 Master Examination Hub
-        </h1>
-        <p className="text-[#6B5D52] max-w-3xl leading-relaxed text-sm sm:text-base font-medium">
-          Assam Direct Recruitment Examination (ADRE) is the gateway to Class III and Class IV government posts across Assam state departments. Explore complete syllabus details, previous year question analysis, and free practice tests.
-        </p>
-      </header>
 
-      {/* Quick Navigation Cluster Cards */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Link href="/adre/syllabus/" className="glass-panel p-6 rounded-2xl border-[#E5DAC8] hover:border-[#9E3A26] transition-all group">
-          <div className="w-10 h-10 rounded-xl bg-[#9E3A26]/15 text-[#9E3A26] flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition-transform">
-            📖
+        {/* 3 Main Categories Grid styled exactly like Difficulty Tier Selector Cards */}
+        <div className="space-y-3">
+          <span className="text-xs font-mono font-bold text-[#6B5D52] uppercase tracking-wider block">
+            Explore Official Examination Pillars
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <Link
+              href="/adre/syllabus/"
+              className="p-5 rounded-2xl border border-[#E5DAC8] bg-[#F3EDE2] hover:border-[#C9A468] hover:shadow-md transition-all text-left group relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-emerald-700/15 text-emerald-800 font-mono">
+                  Syllabus
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">6 Modules</span>
+              </div>
+              <h3 className="text-sm font-bold text-[#1D1814] mt-2 group-hover:text-[#9E3A26]">
+                Official Exam Syllabus
+              </h3>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Topic-wise breakdown for Assam GK, Social Studies, Maths, Science & English.
+              </p>
+            </Link>
+
+            <Link
+              href="/adre/previous-year-question-paper/"
+              className="p-5 rounded-2xl border border-[#C9A468] bg-[#F3EDE2] ring-2 ring-[#C9A468]/50 shadow-md transition-all text-left group relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-[#C9A468]/20 text-[#A88244] font-mono">
+                  PYQ Vault
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">10 Papers</span>
+              </div>
+              <h3 className="text-sm font-bold text-[#1D1814] mt-2 group-hover:text-[#9E3A26]">
+                2022 & 2024 Question Papers
+              </h3>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Original SLRC exam booklets & 1,226+ solved questions with step-by-step solutions.
+              </p>
+            </Link>
+
+            <Link
+              href="/adre/mock-test/"
+              className="p-5 rounded-2xl border border-[#E5DAC8] bg-[#F3EDE2] hover:border-[#C9A468] hover:shadow-md transition-all text-left group relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-[#9E3A26]/15 text-[#9E3A26] font-mono">
+                  Practice Mocks
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">Timed Exam</span>
+              </div>
+              <h3 className="text-sm font-bold text-[#1D1814] mt-2 group-hover:text-[#9E3A26]">
+                Interactive Mock Test Series
+              </h3>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Full-length mock exams with real OMR timer, negative marking & mistake bank.
+              </p>
+            </Link>
           </div>
-          <h2 className="text-lg font-bold text-[#1D1814] mb-2 group-hover:text-[#9E3A26]">Detailed Syllabus</h2>
-          <p className="text-xs text-[#6B5D52] leading-relaxed mb-4">
-            Topic-wise breakdown for Assam GK, Social Studies, General Science, Maths, Reasoning, and English.
-          </p>
-          <span className="text-xs text-[#9E3A26] font-bold">View Syllabus →</span>
-        </Link>
+        </div>
+      </div>
 
-        <Link href="/adre/grade-3/" className="glass-panel p-6 rounded-2xl border-[#E5DAC8] hover:border-[#C9A468] transition-all group">
-          <div className="w-10 h-10 rounded-xl bg-[#C9A468]/20 text-[#A88244] flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition-transform">
-            👔
-          </div>
-          <h2 className="text-lg font-bold text-[#1D1814] mb-2 group-hover:text-[#A88244]">Grade 3 Hub</h2>
-          <p className="text-xs text-[#6B5D52] leading-relaxed mb-4">
-            Graduate and Higher Secondary category examination patterns, eligibility, and specialized mock tests.
-          </p>
-          <span className="text-xs text-[#A88244] font-bold">Explore Grade 3 →</span>
-        </Link>
+      {/* ADRE Exam Breakdown Article Card */}
+      <article className="glass-panel p-8 rounded-3xl space-y-6 text-[#1D1814] leading-relaxed text-sm border-[#E5DAC8]">
+        <div className="flex items-center justify-between border-b border-[#E5DAC8] pb-4">
+          <span className="px-3 py-1 bg-[#9E3A26]/15 text-[#9E3A26] text-xs font-mono font-bold rounded-md uppercase">
+            Official Exam Intelligence
+          </span>
+          <span className="text-xs text-[#6B5D52] font-mono">SLRC Guidelines</span>
+        </div>
 
-        <Link href="/adre/grade-4/" className="glass-panel p-6 rounded-2xl border-[#E5DAC8] hover:border-emerald-600 transition-all group">
-          <div className="w-10 h-10 rounded-xl bg-emerald-600/15 text-emerald-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition-transform">
-            ⚙️
-          </div>
-          <h2 className="text-lg font-bold text-[#1D1814] mb-2 group-hover:text-emerald-700">Grade 4 Hub</h2>
-          <p className="text-xs text-[#6B5D52] leading-relaxed mb-4">
-            Class 8 and Class 10 pass post details, exam structure, negative marking scheme, and target practice sets.
-          </p>
-          <span className="text-xs text-emerald-700 font-bold">Explore Grade 4 →</span>
-        </Link>
-
-        <Link href="/adre/previous-year-question-paper/" className="glass-panel p-6 rounded-2xl border-[#E5DAC8] hover:border-sky-600 transition-all group">
-          <div className="w-10 h-10 rounded-xl bg-sky-600/15 text-sky-700 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition-transform">
-            📝
-          </div>
-          <h2 className="text-lg font-bold text-[#1D1814] mb-2 group-hover:text-sky-700">PYQ Vault</h2>
-          <p className="text-xs text-[#6B5D52] leading-relaxed mb-4">
-            Official 2022 and 2024 solved question papers with answer keys and topic distribution stats.
-          </p>
-          <span className="text-xs text-sky-700 font-bold">Solve PYQs Online →</span>
-        </Link>
-      </section>
-
-      {/* ADRE Exam Breakdown Article */}
-      <article className="glass-panel p-8 rounded-3xl space-y-6 text-[#1D1814] leading-relaxed text-sm">
         <h2 className="text-2xl font-bold text-[#1D1814]">Understanding the ADRE Examination System</h2>
         <p className="text-[#6B5D52]">
           The State Level Recruitment Commission (SLRC) of Assam conducts the Assam Direct Recruitment Examination (ADRE) to streamline recruitment for thousands of vacant Grade III and Grade IV positions across state government departments.
         </p>
 
-        <h3 className="text-xl font-bold text-[#1D1814] pt-2">Key Highlights of ADRE 3.0</h3>
-        <ul className="list-disc pl-5 space-y-2 text-[#6B5D52]">
-          <li><strong className="text-[#1D1814]">Bilingual Paper Format:</strong> Questions are presented in English, Assamese, Bodo, and Bengali.</li>
-          <li><strong className="text-[#1D1814]">OMR-Based Examination:</strong> Multiple Choice Questions (MCQs) evaluated with standard negative marking rules.</li>
-          <li><strong className="text-[#1D1814]">Assam GK Weightage:</strong> Up to 35-40% of the total question paper covers Assam History, Culture, Geography, Economy, and Current Affairs.</li>
-        </ul>
+        <h3 className="text-lg font-bold text-[#1D1814] pt-2">Key Highlights of ADRE 3.0</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
+          <div className="p-4 bg-[#F3EDE2] rounded-xl border border-[#E5DAC8]">
+            <span className="text-xs font-mono font-bold text-[#9E3A26] block uppercase">Format</span>
+            <span className="text-sm font-bold text-[#1D1814] mt-1 block">Bilingual Paper</span>
+            <p className="text-xs text-[#6B5D52] mt-1">Presented in English, Assamese, Bodo, and Bengali.</p>
+          </div>
+          <div className="p-4 bg-[#F3EDE2] rounded-xl border border-[#E5DAC8]">
+            <span className="text-xs font-mono font-bold text-[#A88244] block uppercase">Marking</span>
+            <span className="text-sm font-bold text-[#1D1814] mt-1 block">OMR & Negative Marks</span>
+            <p className="text-xs text-[#6B5D52] mt-1">0.25 mark deduction for every wrong response.</p>
+          </div>
+          <div className="p-4 bg-[#F3EDE2] rounded-xl border border-[#E5DAC8]">
+            <span className="text-xs font-mono font-bold text-emerald-800 block uppercase">Assam GK</span>
+            <span className="text-sm font-bold text-[#1D1814] mt-1 block">35-40% Weightage</span>
+            <p className="text-xs text-[#6B5D52] mt-1">Covers History, Geography, Ahom dynasty & Polity.</p>
+          </div>
+        </div>
 
         <div className="p-6 rounded-2xl bg-[#F3EDE2] border border-[#E5DAC8] flex flex-col sm:flex-row items-center justify-between gap-4 mt-6">
           <div>
@@ -110,4 +147,5 @@ export default function AdreHubPage() {
     </div>
   );
 }
+
 

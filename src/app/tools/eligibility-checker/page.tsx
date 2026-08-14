@@ -26,37 +26,37 @@ export default function EligibilityCheckerPage() {
   const isGrade4Eligible = isAgeEligible;
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10 bg-[#F9F4EB]">
       <header className="text-center space-y-3">
-        <span className="text-xs font-semibold text-axom-red bg-axom-red/10 px-3 py-1 rounded-md">
+        <span className="text-xs font-mono font-bold text-[#9E3A26] bg-[#9E3A26]/10 px-3.5 py-1.5 rounded-lg border border-[#9E3A26]/20">
           Assam Recruitment Compliance Tool
         </span>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
+        <h1 className="text-3xl sm:text-5xl font-extrabold text-[#1D1814]">
           ADRE Eligibility & Age Checker
         </h1>
-        <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
+        <p className="text-[#6B5D52] text-sm sm:text-base max-w-xl mx-auto font-medium">
           Verify your eligibility for ADRE Grade 3 & Grade 4 according to official Assam Government relaxation rules.
         </p>
       </header>
 
-      <div className="glass-panel p-6 sm:p-8 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl grid grid-cols-1 md:grid-cols-2 gap-8 border-[#E5DAC8]">
         <div className="space-y-6">
           <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">Your Age (Years)</label>
+            <label className="block text-xs font-mono font-bold text-[#6B5D52] uppercase mb-2">Your Age (Years)</label>
             <input
               type="number"
               value={age}
               onChange={(e) => setAge(Number(e.target.value))}
-              className="w-full bg-axom-navy border border-axom-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-axom-red"
+              className="w-full bg-[#F3EDE2] border border-[#E5DAC8] rounded-xl px-4 py-3 text-[#1D1814] text-sm focus:outline-none focus:border-[#9E3A26]"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">Reservation Category</label>
+            <label className="block text-xs font-mono font-bold text-[#6B5D52] uppercase mb-2">Reservation Category</label>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="w-full bg-axom-navy border border-axom-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-axom-red"
+              className="w-full bg-[#F3EDE2] border border-[#E5DAC8] rounded-xl px-4 py-3 text-[#1D1814] text-sm focus:outline-none focus:border-[#9E3A26]"
             >
               <option value="UR">Unreserved (UR) — Upper Limit 40</option>
               <option value="OBC">OBC / MOBC — Upper Limit 43</option>
@@ -67,11 +67,11 @@ export default function EligibilityCheckerPage() {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase mb-2">Educational Qualification</label>
+            <label className="block text-xs font-mono font-bold text-[#6B5D52] uppercase mb-2">Educational Qualification</label>
             <select
               value={qualification}
               onChange={(e) => setQualification(e.target.value)}
-              className="w-full bg-axom-navy border border-axom-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-axom-red"
+              className="w-full bg-[#F3EDE2] border border-[#E5DAC8] rounded-xl px-4 py-3 text-[#1D1814] text-sm focus:outline-none focus:border-[#9E3A26]"
             >
               <option value="Graduate">Bachelor Degree (Graduate)</option>
               <option value="HS">Higher Secondary (Class 12)</option>
@@ -82,34 +82,34 @@ export default function EligibilityCheckerPage() {
         </div>
 
         {/* Results */}
-        <div className="bg-axom-navy/90 border border-axom-border p-6 rounded-2xl flex flex-col justify-between space-y-6">
-          <h3 className="text-sm font-bold text-white uppercase tracking-wider border-b border-axom-border pb-3">Eligibility Report</h3>
+        <div className="bg-[#F3EDE2] border border-[#E5DAC8] p-6 rounded-2xl flex flex-col justify-between space-y-6">
+          <h3 className="text-sm font-bold text-[#1D1814] font-mono uppercase tracking-wider border-b border-[#E5DAC8] pb-3">Eligibility Report</h3>
 
           <div className="space-y-4">
-            <div className="p-4 rounded-xl border bg-axom-card border-axom-border space-y-1">
-              <div className="flex justify-between text-xs font-bold">
-                <span className="text-white">ADRE Grade 3 Posts:</span>
-                <span className={isGrade3Eligible ? 'text-emerald-400' : 'text-axom-red'}>
+            <div className="p-4 rounded-xl border bg-[#F9F4EB] border-[#E5DAC8] space-y-1">
+              <div className="flex justify-between text-xs font-bold font-mono">
+                <span className="text-[#1D1814]">ADRE Grade 3 Posts:</span>
+                <span className={isGrade3Eligible ? 'text-emerald-800' : 'text-[#9E3A26]'}>
                   {isGrade3Eligible ? '✓ ELIGIBLE' : '✕ NOT ELIGIBLE'}
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400">Requires Graduation or HS depending on specific category.</p>
+              <p className="text-[11px] text-[#6B5D52]">Requires Graduation or HS depending on specific category.</p>
             </div>
 
-            <div className="p-4 rounded-xl border bg-axom-card border-axom-border space-y-1">
-              <div className="flex justify-between text-xs font-bold">
-                <span className="text-white">ADRE Grade 4 Posts:</span>
-                <span className={isGrade4Eligible ? 'text-emerald-400' : 'text-axom-red'}>
+            <div className="p-4 rounded-xl border bg-[#F9F4EB] border-[#E5DAC8] space-y-1">
+              <div className="flex justify-between text-xs font-bold font-mono">
+                <span className="text-[#1D1814]">ADRE Grade 4 Posts:</span>
+                <span className={isGrade4Eligible ? 'text-emerald-800' : 'text-[#9E3A26]'}>
                   {isGrade4Eligible ? '✓ ELIGIBLE' : '✕ NOT ELIGIBLE'}
                 </span>
               </div>
-              <p className="text-[11px] text-slate-400">Requires Class 8 or Class 10 pass status.</p>
+              <p className="text-[11px] text-[#6B5D52]">Requires Class 8 or Class 10 pass status.</p>
             </div>
           </div>
 
           <Link
             href="/adre/mock-test/"
-            className="block text-center py-3 bg-axom-red hover:bg-axom-redDark text-white text-xs font-bold rounded-xl shadow-lg"
+            className="btn-ahom-primary block text-center text-xs"
           >
             Start Preparing Now →
           </Link>
@@ -118,3 +118,4 @@ export default function EligibilityCheckerPage() {
     </div>
   );
 }
+

@@ -14,67 +14,96 @@ export default function AssamGkHubPage() {
   ]);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8 bg-[#F9F4EB]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
-      <header className="space-y-4">
-        <div className="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-md">
-          <span>Topical Authority Hub</span>
-        </div>
-        <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
-          Assam GK & Cultural Ecosystem
-        </h1>
-        <p className="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-          Comprehensive, structured Assam General Knowledge preparation portal covering Ancient Assam, Ahom Dynasty, Physical Geography, State Polity, Art, Literature, and Tribal heritage.
-        </p>
-      </header>
-
-      {/* Subject Cluster Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Link href="/assam-gk/history/" className="glass-panel p-6 rounded-2xl border-axom-border hover:border-axom-red/50 transition-all group">
-          <div className="w-10 h-10 rounded-xl bg-axom-red/20 text-axom-red flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-105 transition-transform">
-            🗡️
+      {/* Hero Hierarchical Selector - Matching Mock Test Selector Aesthetics */}
+      <div className="glass-panel p-6 sm:p-8 rounded-3xl space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#E5DAC8] pb-6">
+          <div>
+            <span className="text-xs font-mono font-bold text-[#9E3A26] uppercase tracking-wider">Topical Authority Hub</span>
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-[#1D1814] mt-1">Assam GK & Cultural Ecosystem</h1>
           </div>
-          <h2 className="text-lg font-bold text-white mb-2">Assam History</h2>
-          <p className="text-xs text-slate-400 leading-relaxed mb-4">
-            Kamarupa dynasty, 600-year Ahom Kingdom rule, Lachit Borphukan, Saraighat Battle, and freedom movements.
-          </p>
-          <span className="text-xs text-axom-red font-semibold">Study History Notes →</span>
-        </Link>
 
-        <div className="glass-panel p-6 rounded-2xl border-axom-border space-y-2 opacity-90">
-          <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl mb-4">
-            🏞️
+          <div className="inline-flex bg-[#EBE2D4] p-1 rounded-2xl border border-[#E5DAC8]">
+            <span className="px-5 py-2 text-xs font-mono font-extrabold bg-[#C9A468] text-[#1D1814] rounded-xl shadow-md">
+              High Yield 35%+ Marks
+            </span>
           </div>
-          <h2 className="text-lg font-bold text-white mb-2">Assam Geography</h2>
-          <p className="text-xs text-slate-400 leading-relaxed mb-4">
-            Brahmaputra & Barak basins, 7 National Parks, Ramsar sites, oilfields, and climate zones.
-          </p>
-          <span className="text-xs text-emerald-400 font-semibold">High Weightage Topic</span>
         </div>
 
-        <div className="glass-panel p-6 rounded-2xl border-axom-border space-y-2 opacity-90">
-          <div className="w-10 h-10 rounded-xl bg-axom-gold/20 text-axom-gold flex items-center justify-center font-bold text-xl mb-4">
-            📜
-          </div>
-          <h2 className="text-lg font-bold text-white mb-2">Assam Polity & Admin</h2>
-          <p className="text-xs text-slate-400 leading-relaxed mb-4">
-            Assam Legislative Assembly, Autonomous Councils (BTC, KAAC, NCHAC), and State Judiciary.
-          </p>
-          <span className="text-xs text-axom-gold font-semibold">Polity MCQ Sets</span>
-        </div>
+        {/* 4 Core Subject Pillars styled identically to Mock Test Tier Cards */}
+        <div className="space-y-3">
+          <span className="text-xs font-mono font-bold text-[#6B5D52] uppercase tracking-wider block">
+            Select Core Subject Pillar
+          </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              href="/assam-gk/history/"
+              className="p-5 rounded-2xl border border-[#9E3A26] bg-[#F3EDE2] ring-2 ring-[#9E3A26]/30 shadow-md transition-all text-left group relative overflow-hidden"
+            >
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-[#9E3A26]/15 text-[#9E3A26] font-mono">
+                  Primary
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">Notes + MCQs</span>
+              </div>
+              <h2 className="text-sm font-bold text-[#1D1814] mt-2 group-hover:text-[#9E3A26]">
+                Assam History & Ahoms
+              </h2>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Kamarupa dynasty, 600-year Ahom Kingdom rule, Lachit Borphukan & Saraighat.
+              </p>
+            </Link>
 
-        <div className="glass-panel p-6 rounded-2xl border-axom-border space-y-2 opacity-90">
-          <div className="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xl mb-4">
-            🎭
+            <div className="p-5 rounded-2xl border border-[#E5DAC8] bg-[#F3EDE2]/70 text-left relative overflow-hidden">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-emerald-700/15 text-emerald-800 font-mono">
+                  Geography
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">7 Parks</span>
+              </div>
+              <h2 className="text-sm font-bold text-[#1D1814] mt-2">
+                Physical Geography & Rivers
+              </h2>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Brahmaputra basin, National Parks, oilfields, & climate zones.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl border border-[#E5DAC8] bg-[#F3EDE2]/70 text-left relative overflow-hidden">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-[#C9A468]/20 text-[#A88244] font-mono">
+                  Polity
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">Councils</span>
+              </div>
+              <h2 className="text-sm font-bold text-[#1D1814] mt-2">
+                Assam Polity & Admin
+              </h2>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Assam Legislative Assembly, BTC, KAAC, & State Judiciary rules.
+              </p>
+            </div>
+
+            <div className="p-5 rounded-2xl border border-[#E5DAC8] bg-[#F3EDE2]/70 text-left relative overflow-hidden">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-xs font-extrabold uppercase px-2.5 py-0.5 rounded-md bg-sky-700/15 text-sky-800 font-mono">
+                  Culture
+                </span>
+                <span className="text-[11px] text-[#6B5D52] font-mono">Tribal</span>
+              </div>
+              <h2 className="text-sm font-bold text-[#1D1814] mt-2">
+                Art, Culture & Heritage
+              </h2>
+              <p className="text-[11px] text-[#6B5D52] mt-1">
+                Bihu, Sattriya, Bodo, Karbi, Mishing traditions & literature.
+              </p>
+            </div>
           </div>
-          <h2 className="text-lg font-bold text-white mb-2">Art, Culture & Tribes</h2>
-          <p className="text-xs text-slate-400 leading-relaxed mb-4">
-            Bihu festivals, Sattriya dance, Bodo, Karbi, Mishing, Dimasa cultural traditions & Assamese literature.
-          </p>
-          <span className="text-xs text-sky-400 font-semibold">Culture MCQ Drills</span>
         </div>
       </div>
     </div>
   );
 }
+
