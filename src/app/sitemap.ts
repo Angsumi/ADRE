@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/adre/mock-test/',
     '/adre/topics/',
     '/adre/subjects/',
+    '/tools/',
     '/tools/score-calculator/',
     '/tools/eligibility-checker/',
     '/tools/study-planner/',
