@@ -3,7 +3,7 @@ import { getAllTopics, getAllSubjects } from '@/lib/topicData';
 import { SYLLABUS_SUBJECTS } from '@/lib/syllabusData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://axomrank.com';
+  const baseUrl = 'https://Angsumi.github.io/ADRE';
 
   const staticRoutes = [
     '',
