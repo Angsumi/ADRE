@@ -2,12 +2,13 @@ import Link from 'next/link';
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-axom-navy/90 backdrop-blur-md border-b border-axom-border/50">
+    <header className="sticky top-0 z-50 bg-axom-navy/95 backdrop-blur-md border-b border-axom-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Brand Logo with User Image */}
         <Link href="/" className="flex items-center space-x-3 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-axom-red to-axom-gold flex items-center justify-center shadow-lg shadow-axom-red/20 group-hover:scale-105 transition-transform">
-            <span className="font-extrabold text-white text-lg tracking-wider">A</span>
+          <div className="w-10 h-10 rounded-xl bg-axom-card border border-axom-border flex items-center justify-center p-1 group-hover:scale-105 transition-transform overflow-hidden shadow-lg shadow-axom-red/20">
+            {/* Logo Image */}
+            <img src="/ADRE/logo.png" alt="AxomRank Logo" className="w-full h-full object-contain" />
           </div>
           <div>
             <span className="text-xl font-bold text-white tracking-tight">Axom<span className="text-axom-red">Rank</span></span>
@@ -44,14 +45,14 @@ export function Footer() {
     <footer className="bg-axom-charcoal border-t border-axom-border text-slate-400 text-sm py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="space-y-4">
-          <div className="flex items-center space-x-2">
-            <div className="w-7 h-7 rounded-lg bg-axom-red flex items-center justify-center font-bold text-white text-xs">
-              A
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 rounded-lg bg-axom-card border border-axom-border overflow-hidden p-0.5">
+              <img src="/ADRE/logo.png" alt="AxomRank Logo" className="w-full h-full object-contain" />
             </div>
             <span className="text-lg font-bold text-white">AxomRank</span>
           </div>
           <p className="text-xs text-slate-400 leading-relaxed">
-            Assam-first digital competitive-exam preparation platform. Powered by Assam exam intelligence, topic analytics, and bilingual learning tools.
+            Assam-first digital competitive-exam preparation platform. Powered by Assam exam intelligence, topic analytics, and official SLRC ADRE PYQ datasets.
           </p>
         </div>
 

@@ -5,13 +5,15 @@ import Link from 'next/link';
 import { SAMPLE_MOCKS, Question } from '@/data/mockData';
 
 export default function MockTestPage() {
-  const mock = SAMPLE_MOCKS[0]; // Grade 3 Mock
+  const [selectedMockIndex, setSelectedMockIndex] = useState(0);
+  const mock = SAMPLE_MOCKS[selectedMockIndex] || SAMPLE_MOCKS[0];
+  
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
   const [mistakeBank, setMistakeBank] = useState<Question[]>([]);
 
-  const q = mock.questions[currentQuestion];
+  const q = mock.questions[currentQuestion] || mock.questions[0];
 
   const handleSelectOption = (optionIndex: number) => {
     if (submitted) return;
@@ -48,14 +50,39 @@ export default function MockTestPage() {
     }
   });
 
-  const axomRankScore = Math.max(0, Math.round(score * 120 + correctCount * 15));
+  const axomRankScore = Math.max(0, Math.round(score * 10 + correctCount * 5));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      {/* Mock Selector Header */}
+      <div className="glass-panel p-6 rounded-3xl space-y-4">
+        <span className="text-xs font-semibold text-axom-red uppercase tracking-wider">Select Real Mock Exam</span>
+        <div className="flex flex-wrap gap-3">
+          {SAMPLE_MOCKS.map((m, idx) => (
+            <button
+              key={m.id}
+              onClick={() => {
+                setSelectedMockIndex(idx);
+                setCurrentQuestion(0);
+                setSelectedAnswers({});
+                setSubmitted(false);
+              }}
+              className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all ${
+                selectedMockIndex === idx
+                  ? 'bg-axom-red border-axom-red text-white shadow-lg shadow-axom-red/30'
+                  : 'bg-axom-navy/80 border-axom-border text-slate-300 hover:border-slate-500'
+              }`}
+            >
+              {m.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
       <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-axom-border pb-6">
         <div>
-          <span className="text-xs font-semibold text-axom-red uppercase tracking-wider">Exam Simulator Engine</span>
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-white">{mock.title}</h1>
+          <span className="text-xs font-semibold text-axom-gold uppercase tracking-wider">{mock.category} Simulator • {mock.questions.length} Questions</span>
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-white">{mock.title}</h1>
         </div>
         {!submitted ? (
           <button
@@ -133,7 +160,7 @@ export default function MockTestPage() {
           {/* Question Palette Sidebar */}
           <div className="glass-panel p-6 rounded-3xl space-y-6">
             <h3 className="text-sm font-bold text-white uppercase tracking-wider">Question Palette</h3>
-            <div className="grid grid-cols-5 gap-2">
+            <div className="grid grid-cols-5 gap-2 max-h-[400px] overflow-y-auto pr-1">
               {mock.questions.map((item, index) => {
                 const isAnswered = selectedAnswers[item.id] !== undefined;
                 const isCurrent = index === currentQuestion;
@@ -142,7 +169,7 @@ export default function MockTestPage() {
                   <button
                     key={item.id}
                     onClick={() => setCurrentQuestion(index)}
-                    className={`w-10 h-10 rounded-lg text-xs font-bold transition-all ${
+                    className={`w-9 h-9 rounded-lg text-xs font-bold transition-all ${
                       isCurrent
                         ? 'ring-2 ring-axom-gold bg-axom-red text-white'
                         : isAnswered
@@ -167,7 +194,7 @@ export default function MockTestPage() {
             </div>
 
             <div className="space-y-1">
-              <span className="text-xs text-slate-400 uppercase font-semibold">AxomRank Intelligence Score</span>
+              <span className="text-xs text-slate-400 uppercase font-semibold">AxomRank Score</span>
               <p className="text-3xl font-extrabold text-axom-gold">{axomRankScore}</p>
             </div>
 
@@ -189,7 +216,7 @@ export default function MockTestPage() {
             <div className="flex items-center justify-between">
               <div>
                 <span className="px-3 py-1 bg-axom-red/20 text-axom-red text-xs font-bold rounded-md uppercase">
-                  Killer Feature
+                  Signature Feature
                 </span>
                 <h2 className="text-2xl font-bold text-white mt-1">My Mistake Bank</h2>
               </div>
@@ -210,7 +237,7 @@ export default function MockTestPage() {
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-emerald-400">Congratulations! No mistakes recorded in this attempt.</p>
+              <p className="text-sm text-emerald-400">Congratulations! Perfect score or no mistakes recorded.</p>
             )}
           </div>
         </div>
