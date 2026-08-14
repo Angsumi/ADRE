@@ -41,7 +41,7 @@ export const SYLLABUS_SUBJECTS: SyllabusSubject[] = [
     icon: '📐',
     weightage: '20% Marks (Class 10/12 Level)',
     description: 'Comprehensive 10-Phase preparation hierarchy covering foundation arithmetic, commercial math, algebra, geometry, mensuration, data interpretation, and speed calculation strategies.',
-    pdfUrl: '/pdf/syllabus/ADRE_Mathematics_Master_Topic_Map.pdf',
+    pdfUrl: '/ADRE/pdf/syllabus/ADRE_Mathematics_Master_Topic_Map.pdf',
     pdfFilename: 'ADRE_Mathematics_Master_Topic_Map.pdf',
     sections: [
       {
@@ -113,7 +113,7 @@ export const SYLLABUS_SUBJECTS: SyllabusSubject[] = [
     icon: '🗡️',
     weightage: '25%+ Marks',
     description: 'Detailed coverage of Ancient Kamarupa, 600-year Ahom Kingdom, Freedom Movement in Assam, Vedic Period, Mauryan & Gupta Empires, Mughals, and Indian National Movement.',
-    pdfUrl: '/pdf/syllabus/ADRE_History_Syllabus.pdf',
+    pdfUrl: '/ADRE/pdf/syllabus/ADRE_History_Syllabus.pdf',
     pdfFilename: 'ADRE_History_Syllabus.pdf',
     sections: [
       {
@@ -147,7 +147,7 @@ export const SYLLABUS_SUBJECTS: SyllabusSubject[] = [
     icon: '🌍',
     weightage: '20% Marks',
     description: 'Exhaustive syllabus covering Brahmaputra and Barak river networks, 7 National Parks of Assam, soil/climate/minerals, Indian physical geography, and World Earth science fundamentals.',
-    pdfUrl: '/pdf/syllabus/ADRE_Geography_Syllabus.pdf',
+    pdfUrl: '/ADRE/pdf/syllabus/ADRE_Geography_Syllabus.pdf',
     pdfFilename: 'ADRE_Geography_Syllabus.pdf',
     sections: [
       {
@@ -181,7 +181,7 @@ export const SYLLABUS_SUBJECTS: SyllabusSubject[] = [
     icon: '🏛️',
     weightage: '15% Marks',
     description: 'Complete breakdown of Indian Constitution, Fundamental Rights, Union/State Executive, Gauhati High Court, 6th Schedule, Autonomous Councils of Assam (BTC, KAAC, NCHAC), and APSC/UPSC.',
-    pdfUrl: '/pdf/syllabus/ADRE_Polity_Syllabus.pdf',
+    pdfUrl: '/ADRE/pdf/syllabus/ADRE_Polity_Syllabus.pdf',
     pdfFilename: 'ADRE_Polity_Syllabus.pdf',
     sections: [
       {
@@ -220,7 +220,7 @@ export const SYLLABUS_SUBJECTS: SyllabusSubject[] = [
     icon: '📚',
     weightage: '15% Marks',
     description: 'Complete grammar rules, prepositions, tenses, active/passive voice, direct/indirect narration, synonyms/antonyms, idioms, one-word substitution, and reading comprehension.',
-    pdfUrl: '/pdf/syllabus/ADRE_English_Syllabus.pdf',
+    pdfUrl: '/ADRE/pdf/syllabus/ADRE_English_Syllabus.pdf',
     pdfFilename: 'ADRE_English_Syllabus.pdf',
     sections: [
       {

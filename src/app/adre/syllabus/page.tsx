@@ -46,19 +46,19 @@ export default function AdreSyllabusPage() {
             📥 Instant Official PDF Downloads
           </span>
           <div className="flex flex-wrap gap-2.5 text-xs font-bold">
-            <a href="/pdf/syllabus/ADRE_Mathematics_Master_Topic_Map.pdf" download="ADRE_Mathematics_Master_Topic_Map.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
+            <a href="/ADRE/pdf/syllabus/ADRE_Mathematics_Master_Topic_Map.pdf" download="ADRE_Mathematics_Master_Topic_Map.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
               <span>📐 Math Master Map PDF</span>
             </a>
-            <a href="/pdf/syllabus/ADRE_History_Syllabus.pdf" download="ADRE_History_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
+            <a href="/ADRE/pdf/syllabus/ADRE_History_Syllabus.pdf" download="ADRE_History_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
               <span>🗡️ History Syllabus PDF</span>
             </a>
-            <a href="/pdf/syllabus/ADRE_Geography_Syllabus.pdf" download="ADRE_Geography_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
+            <a href="/ADRE/pdf/syllabus/ADRE_Geography_Syllabus.pdf" download="ADRE_Geography_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
               <span>🌍 Geography Syllabus PDF</span>
             </a>
-            <a href="/pdf/syllabus/ADRE_Polity_Syllabus.pdf" download="ADRE_Polity_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
+            <a href="/ADRE/pdf/syllabus/ADRE_Polity_Syllabus.pdf" download="ADRE_Polity_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
               <span>🏛️ Polity Syllabus PDF</span>
             </a>
-            <a href="/pdf/syllabus/ADRE_English_Syllabus.pdf" download="ADRE_English_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
+            <a href="/ADRE/pdf/syllabus/ADRE_English_Syllabus.pdf" download="ADRE_English_Syllabus.pdf" className="bg-[#F9F4EB] hover:bg-[#EBE2D4] text-[#1D1814] px-3.5 py-2 rounded-xl border border-[#E5DAC8] transition-colors flex items-center space-x-1.5">
               <span>📚 English Syllabus PDF</span>
             </a>
           </div>
