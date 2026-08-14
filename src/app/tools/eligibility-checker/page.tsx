@@ -203,6 +203,34 @@ export default function EligibilityCheckerPage() {
           })}
         </div>
       </div>
+
+      {/* Instructions & Guidelines Section */}
+      <section className="glass-panel p-6 sm:p-8 rounded-3xl space-y-6 border-[#E5DAC8] text-[#1D1814]">
+        <h2 className="text-xl font-bold text-[#1D1814] border-b border-[#E5DAC8] pb-3">
+          📘 How to Use the Eligibility Checker & Official Rules
+        </h2>
+
+        <div className="space-y-4 text-xs sm:text-sm text-[#6B5D52] leading-relaxed">
+          <h3 className="text-base font-bold text-[#1D1814]">Step-by-Step Instructions:</h3>
+          <ol className="list-decimal pl-5 space-y-2 text-[#1D1814]">
+            <li><strong>Select Age:</strong> Input your current age in years as per your HSLC / Class 10 Admit Card or Birth Certificate.</li>
+            <li><strong>Select Reservation Category:</strong> Choose your reservation category (UR, OBC/MOBC, SC, ST, PwBD) to automatically apply Government of Assam upper age relaxations.</li>
+            <li><strong>Select Highest Qualification:</strong> Choose your highest completed educational qualification (Bachelor's Degree, HSSLC 12th, HSLC 10th, or Class VIII).</li>
+            <li><strong>Check Driver License (Optional):</strong> Tick the checkbox if you possess a valid LMV/HMV driving license to evaluate eligibility for <strong>Paper-V (Driver)</strong>.</li>
+            <li><strong>Review 5-Paper Report:</strong> The tool instantly evaluates your eligibility for Paper-I, Paper-II, Paper-III, Paper-IV, and Paper-V.</li>
+          </ol>
+
+          <div className="p-4 rounded-xl bg-[#F3EDE2] border border-[#E5DAC8] space-y-2 mt-4">
+            <h4 className="font-bold text-[#1D1814] font-mono">Assam Government Age Relaxation Rules:</h4>
+            <ul className="list-disc pl-5 text-xs text-[#1D1814] space-y-1">
+              <li><strong>Unreserved (UR):</strong> 18 to 40 Years</li>
+              <li><strong>OBC / MOBC:</strong> 18 to 43 Years (+3 Years relaxation)</li>
+              <li><strong>SC / ST:</strong> 18 to 45 Years (+5 Years relaxation)</li>
+              <li><strong>PwBD:</strong> 18 to 50 Years (+10 Years relaxation)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -80,6 +80,23 @@ export default function StudyPlannerPage() {
           </Link>
         </div>
       </div>
+
+      {/* How To Use Instructions Guide Section */}
+      <section className="glass-panel p-6 sm:p-8 rounded-3xl space-y-6 border-[#E5DAC8] text-[#1D1814]">
+        <h2 className="text-xl font-bold text-[#1D1814] border-b border-[#E5DAC8] pb-3">
+          📘 How to Use the 30-Day ADRE Study Planner
+        </h2>
+
+        <div className="space-y-4 text-xs sm:text-sm text-[#6B5D52] leading-relaxed">
+          <h3 className="text-base font-bold text-[#1D1814]">Step-by-Step Instructions:</h3>
+          <ol className="list-decimal pl-5 space-y-2 text-[#1D1814]">
+            <li><strong>Select Target Exam:</strong> Choose whether you are preparing for Grade 3 (Graduate/HSSLC) or Grade 4 (Class 8/HSLC).</li>
+            <li><strong>Input Daily Hours:</strong> Enter how many hours you can commit to studying each day (e.g. 2 hours, 4 hours, or 8 hours).</li>
+            <li><strong>Review High-Yield Allocation:</strong> The planner automatically splits your study time based on official ADRE subject weightage (40% Assam GK & History, 35% Maths & Reasoning, 25% Mock Practice & Revision).</li>
+            <li><strong>Execute Daily Plan:</strong> Follow the recommended daily timetable and track your weak areas using our interactive PYQ solvers.</li>
+          </ol>
+        </div>
+      </section>
     </div>
   );
 }

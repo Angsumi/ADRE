@@ -97,7 +97,33 @@ export default function ScoreCalculatorPage() {
           </Link>
         </div>
       </div>
+
+      {/* How To Use & Calculation Rules Guide Section */}
+      <section className="glass-panel p-6 sm:p-8 rounded-3xl space-y-6 border-[#E5DAC8] text-[#1D1814]">
+        <h2 className="text-xl font-bold text-[#1D1814] border-b border-[#E5DAC8] pb-3">
+          📘 How to Use the ADRE Score Calculator & Official Marking Rules
+        </h2>
+
+        <div className="space-y-4 text-xs sm:text-sm text-[#6B5D52] leading-relaxed">
+          <h3 className="text-base font-bold text-[#1D1814]">Step-by-Step Instructions:</h3>
+          <ol className="list-decimal pl-5 space-y-2 text-[#1D1814]">
+            <li><strong>Enter Total Questions:</strong> Input the total number of questions in your ADRE paper (e.g. 100 questions for Grade 3 or 135 questions for Grade 4).</li>
+            <li><strong>Input Correct Answers:</strong> Enter the exact count of questions you answered correctly. Each correct answer awards <strong>+1.0 Mark</strong>.</li>
+            <li><strong>Input Incorrect Answers:</strong> Enter the count of questions answered wrong. Each wrong answer deducts <strong>-0.25 Marks</strong>.</li>
+            <li><strong>View Score & Rank:</strong> The tool automatically calculates your <strong>Net ADRE Score</strong>, percentage score, and estimated state-level percentile rank.</li>
+          </ol>
+
+          <div className="p-4 rounded-xl bg-[#F3EDE2] border border-[#E5DAC8] space-y-2 mt-4">
+            <h4 className="font-bold text-[#1D1814] font-mono">Official SLRC ADRE Marking Formula:</h4>
+            <p className="font-mono text-xs text-[#9E3A26]">
+              Net Score = (Correct Answers × 1.0) - (Incorrect Answers × 0.25)
+            </p>
+            <p className="text-[11px] text-[#6B5D52]">
+              *Note: Unanswered / omitted questions carry 0 marks and do not attract negative deductions.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
