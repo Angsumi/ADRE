@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllTopics, getAllSubjects } from '@/lib/topicData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://axomrank.com';
+  const baseUrl = 'https://Angsumi.github.io/ADRE';
 
   const staticRoutes = [
     '',
