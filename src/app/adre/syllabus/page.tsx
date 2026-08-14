@@ -89,18 +89,18 @@ export default function AdreSyllabusPage() {
       {/* Detailed Topic Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Assam GK */}
-        <div className="glass-panel p-6 rounded-3xl space-y-4 border-[#E5DAC8]">
+        <div className="bg-[#F3EDE2] p-6 sm:p-8 rounded-3xl space-y-4 border border-[#E5DAC8] shadow-sm">
           <div className="flex items-center justify-between border-b border-[#E5DAC8] pb-3">
-            <h2 className="text-lg font-bold text-[#1D1814]">1. Assam General Knowledge & Culture</h2>
-            <span className="text-xs font-mono font-bold text-[#9E3A26] bg-[#9E3A26]/15 px-2.5 py-1 rounded-md uppercase">
-              High Weightage
+            <h2 className="text-xl font-bold text-[#1D1814]">1. Assam General Knowledge & Culture</h2>
+            <span className="text-xs font-mono font-extrabold text-[#9E3A26] bg-[#9E3A26]/15 px-3 py-1 rounded-md uppercase">
+              High Weightage (35%+)
             </span>
           </div>
-          <ul className="space-y-2 text-xs sm:text-sm text-[#6B5D52] list-disc pl-5">
-            <li><strong className="text-[#1D1814]">Assam History:</strong> Ancient Kamarupa Kingdom, Ahom Dynasty (1228-1826), Moamoria Rebellion, Treaty of Yandabo (1826), Freedom Movement in Assam.</li>
-            <li><strong className="text-[#1D1814]">Assam Geography:</strong> Physical divisions, Brahmaputra & Barak river systems, 7 National Parks, Climate, Mineral resources.</li>
-            <li><strong className="text-[#1D1814]">Assam Polity & Economy:</strong> Assam Panchayat Raj, State Executive, Tea Industry, Oil Refineries, Infrastructure projects.</li>
-            <li><strong className="text-[#1D1814]">Assam Art & Literature:</strong> Bihu festivals, Folk dances, Sattriya dance, Eminent Assamese literary figures (Sankardev, Bezbaroa).</li>
+          <ul className="space-y-3 text-xs sm:text-sm text-[#2C241E] list-disc pl-5 font-medium leading-relaxed">
+            <li><strong className="text-[#1D1814] font-bold">Assam History:</strong> Ancient Kamarupa Kingdom, Ahom Dynasty (1228-1826), Moamoria Rebellion, Treaty of Yandabo (1826), Freedom Movement in Assam.</li>
+            <li><strong className="text-[#1D1814] font-bold">Assam Geography:</strong> Physical divisions, Brahmaputra & Barak river systems, 7 National Parks, Climate, Mineral resources.</li>
+            <li><strong className="text-[#1D1814] font-bold">Assam Polity & Economy:</strong> Assam Panchayat Raj, State Executive, Tea Industry, Oil Refineries, Infrastructure projects.</li>
+            <li><strong className="text-[#1D1814] font-bold">Assam Art & Literature:</strong> Bihu festivals, Folk dances, Sattriya dance, Eminent Assamese literary figures (Sankardev, Bezbaroa).</li>
           </ul>
           <div className="pt-2">
             <Link href="/assam-gk/" className="btn-ahom-primary text-xs inline-block">
@@ -110,18 +110,18 @@ export default function AdreSyllabusPage() {
         </div>
 
         {/* Mathematics */}
-        <div className="glass-panel p-6 rounded-3xl space-y-4 border-[#E5DAC8]">
+        <div className="bg-[#F3EDE2] p-6 sm:p-8 rounded-3xl space-y-4 border border-[#E5DAC8] shadow-sm">
           <div className="flex items-center justify-between border-b border-[#E5DAC8] pb-3">
-            <h2 className="text-lg font-bold text-[#1D1814]">2. Mathematics & Quantitative Aptitude</h2>
-            <span className="text-xs font-mono font-bold text-[#A88244] bg-[#C9A468]/20 px-2.5 py-1 rounded-md uppercase">
+            <h2 className="text-xl font-bold text-[#1D1814]">2. Mathematics & Quantitative Aptitude</h2>
+            <span className="text-xs font-mono font-extrabold text-[#7D5618] bg-[#C9A468]/30 px-3 py-1 rounded-md uppercase">
               Class 10 / 12 Level
             </span>
           </div>
-          <ul className="space-y-2 text-xs sm:text-sm text-[#6B5D52] list-disc pl-5">
-            <li><strong className="text-[#1D1814]">Basic Arithmetic:</strong> Number Systems, Simplification, HCF & LCM.</li>
-            <li><strong className="text-[#1D1814]">Commercial Math:</strong> Percentage, Profit & Loss, Simple & Compound Interest.</li>
-            <li><strong className="text-[#1D1814]">Applications:</strong> Ratio & Proportion, Time & Work, Speed Distance & Time.</li>
-            <li><strong className="text-[#1D1814]">Geometry & DI:</strong> Basic Geometry, Mensuration (Area & Volume), Data Interpretation tables.</li>
+          <ul className="space-y-3 text-xs sm:text-sm text-[#2C241E] list-disc pl-5 font-medium leading-relaxed">
+            <li><strong className="text-[#1D1814] font-bold">Basic Arithmetic:</strong> Number Systems, Simplification, HCF & LCM.</li>
+            <li><strong className="text-[#1D1814] font-bold">Commercial Math:</strong> Percentage, Profit & Loss, Simple & Compound Interest.</li>
+            <li><strong className="text-[#1D1814] font-bold">Applications:</strong> Ratio & Proportion, Time & Work, Speed Distance & Time.</li>
+            <li><strong className="text-[#1D1814] font-bold">Geometry & DI:</strong> Basic Geometry, Mensuration (Area & Volume), Data Interpretation tables.</li>
           </ul>
           <div className="pt-2">
             <Link href="/adre/mock-test/" className="btn-ahom-primary text-xs inline-block">
@@ -131,32 +131,32 @@ export default function AdreSyllabusPage() {
         </div>
 
         {/* Reasoning */}
-        <div className="glass-panel p-6 rounded-3xl space-y-4 border-[#E5DAC8]">
+        <div className="bg-[#F3EDE2] p-6 sm:p-8 rounded-3xl space-y-4 border border-[#E5DAC8] shadow-sm">
           <div className="flex items-center justify-between border-b border-[#E5DAC8] pb-3">
-            <h2 className="text-lg font-bold text-[#1D1814]">3. Logical Reasoning & Mental Ability</h2>
-            <span className="text-xs font-mono font-bold text-sky-800 bg-sky-700/15 px-2.5 py-1 rounded-md uppercase">
+            <h2 className="text-xl font-bold text-[#1D1814]">3. Logical Reasoning & Mental Ability</h2>
+            <span className="text-xs font-mono font-extrabold text-[#0F5278] bg-sky-700/20 px-3 py-1 rounded-md uppercase">
               High Scoring
             </span>
           </div>
-          <ul className="space-y-2 text-xs sm:text-sm text-[#6B5D52] list-disc pl-5">
-            <li><strong className="text-[#1D1814]">Verbal Reasoning:</strong> Analogy, Classification, Coding-Decoding.</li>
-            <li><strong className="text-[#1D1814]">Analytical Ability:</strong> Blood Relations, Direction Sense Test, Number & Letter Series.</li>
-            <li><strong className="text-[#1D1814]">Logic:</strong> Syllogism, Venn Diagrams, Non-Verbal Pattern Completion.</li>
+          <ul className="space-y-3 text-xs sm:text-sm text-[#2C241E] list-disc pl-5 font-medium leading-relaxed">
+            <li><strong className="text-[#1D1814] font-bold">Verbal Reasoning:</strong> Analogy, Classification, Coding-Decoding.</li>
+            <li><strong className="text-[#1D1814] font-bold">Analytical Ability:</strong> Blood Relations, Direction Sense Test, Number & Letter Series.</li>
+            <li><strong className="text-[#1D1814] font-bold">Logic:</strong> Syllogism, Venn Diagrams, Non-Verbal Pattern Completion.</li>
           </ul>
         </div>
 
         {/* English */}
-        <div className="glass-panel p-6 rounded-3xl space-y-4 border-[#E5DAC8]">
+        <div className="bg-[#F3EDE2] p-6 sm:p-8 rounded-3xl space-y-4 border border-[#E5DAC8] shadow-sm">
           <div className="flex items-center justify-between border-b border-[#E5DAC8] pb-3">
             <h2 className="text-lg font-bold text-[#1D1814]">4. General English</h2>
-            <span className="text-xs font-mono font-bold text-emerald-800 bg-emerald-700/15 px-2.5 py-1 rounded-md uppercase">
+            <span className="text-xs font-mono font-extrabold text-[#115E38] bg-emerald-700/20 px-3 py-1 rounded-md uppercase">
               Grammar & Vocab
             </span>
           </div>
-          <ul className="space-y-2 text-xs sm:text-sm text-[#6B5D52] list-disc pl-5">
-            <li><strong className="text-[#1D1814]">Vocabulary:</strong> Synonyms, Antonyms, One-word substitutions, Idioms.</li>
-            <li><strong className="text-[#1D1814]">Grammar Rules:</strong> Prepositions, Tenses, Active/Passive Voice, Direct/Indirect Speech.</li>
-            <li><strong className="text-[#1D1814]">Comprehension:</strong> Reading passages, Sentence Correction & Fillers.</li>
+          <ul className="space-y-3 text-xs sm:text-sm text-[#2C241E] list-disc pl-5 font-medium leading-relaxed">
+            <li><strong className="text-[#1D1814] font-bold">Vocabulary:</strong> Synonyms, Antonyms, One-word substitutions, Idioms.</li>
+            <li><strong className="text-[#1D1814] font-bold">Grammar Rules:</strong> Prepositions, Tenses, Active/Passive Voice, Direct/Indirect Speech.</li>
+            <li><strong className="text-[#1D1814] font-bold">Comprehension:</strong> Reading passages, Sentence Correction & Fillers.</li>
           </ul>
         </div>
       </div>
