@@ -17,8 +17,10 @@ export interface Question {
 export interface MockExam {
   id: string;
   slug: string;
+  filename: string;
   title: string;
-  category: 'Grade 3' | 'Grade 4';
+  grade: 'Grade 3' | 'Grade 4';
+  difficulty: 'Easy' | 'Moderate' | 'Tough';
   timeLimitMinutes: number;
   totalMarks: number;
   questions: Question[];

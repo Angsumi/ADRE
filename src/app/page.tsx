@@ -94,7 +94,7 @@ export default function HomePage() {
               <div key={mock.id} className="bg-axom-navy/80 border border-axom-border p-6 rounded-2xl space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-axom-gold/20 text-axom-gold">
-                    {mock.category}
+                    {mock.grade} ({mock.difficulty})
                   </span>
                   <span className="text-xs text-slate-400">{mock.timeLimitMinutes} Mins | {mock.totalMarks} Marks</span>
                 </div>
