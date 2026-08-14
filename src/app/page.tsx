@@ -3,143 +3,154 @@ import { SAMPLE_MOCKS } from '@/data/mockData';
 
 export default function HomePage() {
   return (
-    <div className="space-y-16 py-8 md:py-12">
-      {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <div className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-axom-red/10 border border-axom-red/30 text-axom-red text-xs sm:text-sm font-medium">
-          <span className="w-2 h-2 rounded-full bg-axom-red animate-pulse" />
-          <span>ADRE 3.0 & Assam Competitive Exam Engine</span>
+    <div className="bg-[#F9F4EB] text-[#1D1814] min-h-screen">
+      {/* 
+        GOLDEN HOUR SEAMLESS HERO SECTION:
+        - Ranghar.jpg is embedded as a full-bleed morphed background
+        - Sunshine golden hour glow (#F7DAA0 & #C9A468) blending seamlessly into warm linen sand (#F9F4EB)
+        - Clean typography without textual box overlays
+      */}
+      <section className="relative w-full overflow-hidden pt-12 pb-24 lg:pt-16 lg:pb-36">
+        
+        {/* Full-width Morphed Ranghar Background Image with Golden Hour Sunshine Gradients */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/ranghar.jpg"
+            alt="Rang Ghar Assam Golden Hour"
+            className="w-full h-full object-contain object-top opacity-55 mix-blend-multiply filter contrast-[1.05] brightness-[1.02]"
+          />
+          
+          {/* Top Subtle Fade */}
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#F9F4EB] to-transparent" />
+
+          {/* Golden Hour Side & Center Sunlight Tint Scrim */}
+          <div className="absolute inset-0 bg-radial from-[#F7DAA0]/35 via-transparent to-[#F9F4EB]" />
+
+          {/* Bottom Seamless Fade into Page Background */}
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#F9F4EB] via-[#F9F4EB]/85 to-transparent" />
         </div>
 
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
-          Prepare Smarter. <br />
-          <span className="bg-gradient-to-r from-axom-red via-axom-goldLight to-axom-gold bg-clip-text text-transparent">
-            Rank Higher in ADRE.
-          </span>
-        </h1>
+        {/* Hero Content floating seamlessly over the Morphed Ranghar Golden Background */}
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-8 pt-8">
+          
+          <div className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-[#1D1814]/85 backdrop-blur-md border border-[#C9A468]/50 text-[#E7C792] font-mono text-xs font-semibold shadow-xl">
+            <span className="w-2 h-2 rounded-full bg-[#9E3A26] animate-pulse" />
+            <span>Assam Direct Recruitment 3.0 Platform</span>
+          </div>
 
-        <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Assam’s exam-intelligence platform. Master ADRE Grade 3 & Grade 4 with interactive PYQ solvers, Assam GK drills, timed full-length mocks, and real-time performance analytics.
-        </p>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-normal text-[#1D1814] tracking-[-0.03em] leading-[1.06] font-sans drop-shadow-sm">
+            Prepare Smarter. <br />
+            <span className="text-[#B54124] font-extrabold italic">Rank Higher</span> in ADRE.
+          </h1>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link
-            href="/adre/mock-test/"
-            className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-axom-red hover:bg-axom-redDark rounded-xl shadow-lg shadow-axom-red/30 transition-all transform hover:-translate-y-0.5"
-          >
-            Start Free ADRE Mock Test
-          </Link>
-          <Link
-            href="/tools/score-calculator/"
-            className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-slate-200 bg-axom-card border border-axom-border hover:bg-axom-surface rounded-xl transition-all"
-          >
-            Calculate ADRE Score
-          </Link>
+          <p className="text-base sm:text-xl text-[#4D3F35] max-w-2xl mx-auto leading-relaxed font-sans font-medium">
+            Assam’s exam-intelligence platform. Master ADRE Grade 3 & Grade 4 with interactive PYQ solvers, Assam GK drills, timed full-length mocks, and real-time performance analytics.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-5 pt-4">
+            <Link href="/adre/mock-test/" className="btn-ahom-primary text-sm px-9 py-4 shadow-xl">
+              START FREE MOCK TEST
+            </Link>
+            <Link href="/tools/score-calculator/" className="btn-ahom-outline text-sm px-9 py-4 backdrop-blur-sm bg-[#F9F4EB]/60">
+              CALCULATE ADRE SCORE
+            </Link>
+          </div>
+
+          {/* Quick Stats Bar in Golden Scrim */}
+          <div className="pt-12 border-t border-[#D9C4A5]/60 max-w-3xl mx-auto grid grid-cols-3 gap-6">
+            <div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#9E3A26] font-mono">100%</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-[#6B5D52] mt-1">Official Pattern</div>
+            </div>
+            <div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#A88244] font-mono">PYQ</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-[#6B5D52] mt-1">2022 & 2024 Vault</div>
+            </div>
+            <div>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#1D1814] font-mono">Bilingual</div>
+              <div className="text-xs font-mono uppercase tracking-wider text-[#6B5D52] mt-1">English & Assamese</div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Primary SEO Hubs Banner */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Link href="/adre/" className="glass-panel p-6 rounded-2xl hover:border-axom-red/50 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-axom-red/20 text-axom-red flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
-              🎯
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">ADRE Master Hub</h3>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Complete syllabus breakdown, Grade 3 & Grade 4 eligibility criteria, exam patterns, and notification updates.
+      {/* SECTION 2: Minimalist Bento Hubs */}
+      <section className="max-w-7xl mx-auto px-6 py-12 border-t border-[#E5DAC8] mb-24">
+        <div className="flex justify-between items-baseline mb-12">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#6B5D52]">01 // EXAM INTELLIGENCE HUBS</span>
+          <span className="font-mono text-xs uppercase tracking-[0.15em] text-[#9E3A26] font-bold">ASSAM DIRECT RECRUITMENT</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <Link href="/adre/" className="group p-8 border border-[#E5DAC8] hover:border-[#C9A468] bg-[#F3EDE2] hover:bg-[#EBE2D4] transition-all rounded-2xl shadow-sm">
+            <div className="font-mono text-xs text-[#9E3A26] font-bold mb-6">HUB 01</div>
+            <h3 className="text-2xl font-normal text-[#1D1814] mb-3 group-hover:text-[#9E3A26] transition-colors">ADRE Master Hub</h3>
+            <p className="text-sm text-[#6B5D52] leading-relaxed mb-6 font-sans">
+              Complete Grade 3 & Grade 4 syllabus breakdown, eligibility criteria, exam patterns, and notification updates.
             </p>
-            <span className="text-xs font-semibold text-axom-red group-hover:underline">Explore ADRE Hub →</span>
+            <span className="font-mono text-xs uppercase tracking-wider text-[#9E3A26] border-b-2 border-[#9E3A26] pb-0.5 font-bold">
+              EXPLORE HUB →
+            </span>
           </Link>
 
-          <Link href="/adre/previous-year-question-paper/" className="glass-panel p-6 rounded-2xl hover:border-axom-gold/50 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-axom-gold/20 text-axom-gold flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
-              📚
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Interactive PYQ Vault</h3>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
+          <Link href="/adre/previous-year-question-paper/" className="group p-8 border border-[#E5DAC8] hover:border-[#C9A468] bg-[#F3EDE2] hover:bg-[#EBE2D4] transition-all rounded-2xl shadow-sm">
+            <div className="font-mono text-xs text-[#9E3A26] font-bold mb-6">HUB 02</div>
+            <h3 className="text-2xl font-normal text-[#1D1814] mb-3 group-hover:text-[#9E3A26] transition-colors">Interactive PYQ Vault</h3>
+            <p className="text-sm text-[#6B5D52] leading-relaxed mb-6 font-sans">
               Solve official ADRE 2022 & 2024 question papers in interactive exam mode with step-by-step bilingual solutions.
             </p>
-            <span className="text-xs font-semibold text-axom-gold group-hover:underline">Solve PYQ Papers →</span>
+            <span className="font-mono text-xs uppercase tracking-wider text-[#9E3A26] border-b-2 border-[#9E3A26] pb-0.5 font-bold">
+              SOLVE PYQS →
+            </span>
           </Link>
 
-          <Link href="/assam-gk/" className="glass-panel p-6 rounded-2xl hover:border-emerald-500/50 transition-all group">
-            <div className="w-10 h-10 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl mb-4 group-hover:scale-110 transition-transform">
-              🏛️
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Assam GK Ecosystem</h3>
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
+          <Link href="/assam-gk/" className="group p-8 border border-[#E5DAC8] hover:border-[#C9A468] bg-[#F3EDE2] hover:bg-[#EBE2D4] transition-all rounded-2xl shadow-sm">
+            <div className="font-mono text-xs text-[#9E3A26] font-bold mb-6">HUB 03</div>
+            <h3 className="text-2xl font-normal text-[#1D1814] mb-3 group-hover:text-[#9E3A26] transition-colors">Assam GK Ecosystem</h3>
+            <p className="text-sm text-[#6B5D52] leading-relaxed mb-6 font-sans">
               High-yield notes and MCQs covering Assam History, Ahom Dynasty, Rivers, Geography, Literature, and Polity.
             </p>
-            <span className="text-xs font-semibold text-emerald-400 group-hover:underline">Explore Assam GK →</span>
+            <span className="font-mono text-xs uppercase tracking-wider text-[#9E3A26] border-b-2 border-[#9E3A26] pb-0.5 font-bold">
+              STUDY ASSAM GK →
+            </span>
           </Link>
         </div>
       </section>
 
-      {/* Featured Mock Test Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 rounded-3xl space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h2 className="text-2xl font-bold text-white">Full-Length ADRE Mock Exam Series</h2>
-              <p className="text-sm text-slate-400">Replicate the real State Level Recruitment Commission examination environment.</p>
-            </div>
-            <Link href="/adre/mock-test/" className="text-sm font-semibold text-axom-red hover:underline">
-              View All Mocks →
-            </Link>
+      {/* SECTION 3: Minimalist Mock Series */}
+      <section className="max-w-7xl mx-auto px-6 py-12 border-t border-[#E5DAC8] mb-24">
+        <div className="flex flex-col sm:flex-row justify-between sm:items-end mb-12 gap-4">
+          <div>
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-[#6B5D52]">02 // TEST SERIES MATRIX</span>
+            <h2 className="text-3xl font-normal text-[#1D1814] mt-2">Full-Length ADRE Mock Exam Series</h2>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {SAMPLE_MOCKS.map((mock) => (
-              <div key={mock.id} className="bg-axom-navy/80 border border-axom-border p-6 rounded-2xl space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="px-2.5 py-1 rounded-md text-xs font-semibold bg-axom-gold/20 text-axom-gold">
-                    {mock.grade} ({mock.difficulty})
-                  </span>
-                  <span className="text-xs text-slate-400">{mock.timeLimitMinutes} Mins | {mock.totalMarks} Marks</span>
-                </div>
-                <h3 className="text-lg font-bold text-white">{mock.title}</h3>
-                <p className="text-xs text-slate-400">Contains high-weightage Assam GK, Reasoning, Mathematics, and English practice sets.</p>
-                <Link
-                  href={`/adre/mock-test/`}
-                  className="block text-center py-2.5 px-4 text-xs font-semibold text-white bg-axom-red hover:bg-axom-redDark rounded-lg transition-colors"
-                >
-                  Attempt Mock Exam
-                </Link>
-              </div>
-            ))}
-          </div>
+          <Link href="/adre/mock-test/" className="font-mono text-xs uppercase tracking-wider text-[#9E3A26] underline font-bold">
+            VIEW ALL MOCKS →
+          </Link>
         </div>
-      </section>
 
-      {/* Free Interactive Tools CTA */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-axom-charcoal via-axom-card to-axom-navy border border-axom-border p-8 rounded-3xl grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
-          <div className="space-y-2">
-            <h3 className="text-lg font-bold text-white">ADRE Score Calculator</h3>
-            <p className="text-xs text-slate-400">Calculate negative marking & get percentile analysis instantly.</p>
-            <Link href="/tools/score-calculator/" className="inline-block text-xs text-axom-gold font-semibold hover:underline">
-              Launch Score App →
-            </Link>
-          </div>
-
-          <div className="space-y-2">
-            <h3 className="text-lg font-bold text-white">Eligibility & Age Checker</h3>
-            <p className="text-xs text-slate-400">Verify your age limit & education qualification according to Assam rules.</p>
-            <Link href="/tools/eligibility-checker/" className="inline-block text-xs text-axom-gold font-semibold hover:underline">
-              Check Eligibility →
-            </Link>
-          </div>
-
-          <div className="space-y-2">
-            <h3 className="text-lg font-bold text-white">30-Day Study Planner</h3>
-            <p className="text-xs text-slate-400">Generate a custom Assam exam preparation timetable for Grade 3 & 4.</p>
-            <Link href="/tools/study-planner/" className="inline-block text-xs text-axom-gold font-semibold hover:underline">
-              Generate Timetable →
-            </Link>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {SAMPLE_MOCKS.map((mock) => (
+            <div key={mock.id} className="p-8 border border-[#E5DAC8] bg-[#F3EDE2] rounded-2xl space-y-6 shadow-sm">
+              <div className="flex justify-between items-center font-mono text-xs text-[#6B5D52] border-b border-[#E5DAC8] pb-4">
+                <span className="text-[#9E3A26] font-bold">{mock.grade.toUpperCase()} ({mock.difficulty.toUpperCase()})</span>
+                <span>{mock.timeLimitMinutes} MINS · {mock.totalMarks} MARKS</span>
+              </div>
+              <h3 className="text-2xl font-normal text-[#1D1814]">{mock.title}</h3>
+              <p className="text-sm text-[#6B5D52] leading-relaxed">
+                Contains high-weightage Assam GK, Reasoning, Mathematics, and English practice sets.
+              </p>
+              <Link href="/adre/mock-test/" className="block w-full text-center py-3.5 bg-[#9E3A26] text-[#F9F4EB] text-xs font-mono uppercase tracking-widest hover:bg-[#7D2B1B] transition-colors rounded-xl font-bold shadow-md shadow-[#9E3A26]/20">
+                ATTEMPT MOCK EXAM
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
     </div>
   );
 }
+
+
+

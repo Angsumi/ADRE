@@ -9,16 +9,16 @@ module.exports = {
     extend: {
       colors: {
         axom: {
-          red: "#C8102E",
-          redDark: "#A00C24",
-          charcoal: "#121826",
-          navy: "#0F172A",
-          gold: "#D97706",
-          goldLight: "#F59E0B",
-          surface: "#1E293B",
-          card: "#182234",
-          border: "#334155",
-          muted: "#94A3B8",
+          red: "#9E3A26",
+          redDark: "#7D2B1B",
+          charcoal: "#F1ECE2",
+          navy: "#F9F4EB",
+          gold: "#C9A468",
+          goldLight: "#E7C792",
+          surface: "#F3EDE2",
+          card: "#F3EDE2",
+          border: "#E5DAC8",
+          muted: "#6B5D52",
         },
       },
       fontFamily: {
