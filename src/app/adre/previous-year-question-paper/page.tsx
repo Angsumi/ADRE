@@ -12,27 +12,36 @@ export default function PyqVaultPage() {
   const rawQuestions = selectedYear === 2024 ? PYQ_2024_DATA : selectedYear === 2022 ? PYQ_2022_DATA : ALL_PYQ_DATA;
 
   const filteredQuestions = rawQuestions.filter((q) => {
-    const matchSubject = selectedSubject === 'ALL' || q.subject.toLowerCase() === selectedSubject.toLowerCase();
+    let matchSubject = selectedSubject === 'ALL';
+    if (!matchSubject) {
+      if (selectedSubject === 'Social Studies') {
+        matchSubject = q.subject.toLowerCase().includes('social') || q.subject.toLowerCase().includes('general knowledge');
+      } else {
+        matchSubject = q.subject.toLowerCase().includes(selectedSubject.toLowerCase());
+      }
+    }
+
     const matchSearch =
       searchQuery === '' ||
       q.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.topic.toLowerCase().includes(searchQuery.toLowerCase());
+
     return matchSubject && matchSearch;
   });
 
-  const subjects = ['ALL', 'Assam GK', 'English', 'General Mathematics', 'Reasoning', 'Social Studies'];
+  const subjects = ['ALL', 'Assam GK', 'Social Studies', 'General Science', 'General Mathematics', 'Reasoning', 'English'];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       <header className="space-y-4">
         <div className="inline-flex items-center space-x-2 text-xs font-semibold uppercase tracking-wider text-axom-gold bg-axom-gold/10 px-3 py-1 rounded-md">
-          <span>Official SLRC ADRE Dataset</span>
+          <span>Official SLRC ADRE Dataset • {ALL_PYQ_DATA.length} Questions</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
           ADRE Previous Year Question Paper (PYQ Vault)
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl leading-relaxed">
-          Access over <strong>1,020+ official solved ADRE questions</strong> from the 2022 and 2024 examinations. Filter by exam year, subject, or search by keyword.
+          Access complete, standardized official ADRE solved questions from 2022 and 2024 papers. Filter by exam year, subject, or keyword.
         </p>
       </header>
 
@@ -53,7 +62,7 @@ export default function PyqVaultPage() {
                       : 'bg-axom-navy/80 border-axom-border text-slate-400'
                   }`}
                 >
-                  {year === 'ALL' ? 'All Years (1000+)' : year}
+                  {year === 'ALL' ? `All Years (${ALL_PYQ_DATA.length})` : year}
                 </button>
               ))}
             </div>
