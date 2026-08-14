@@ -102,7 +102,7 @@ export default function PyqVaultPage() {
   const [selectedYear, setSelectedYear] = useState<number | 'ALL'>('ALL');
   const [selectedSubject, setSelectedSubject] = useState<string>('ALL');
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'SOLVED' | 'DOWNLOADS'>('DOWNLOADS');
+  const [activeTab, setActiveTab] = useState<'SOLVED' | 'DOWNLOADS'>('SOLVED');
 
   const rawQuestions = selectedYear === 2024 ? PYQ_2024_DATA : selectedYear === 2022 ? PYQ_2022_DATA : ALL_PYQ_DATA;
 
