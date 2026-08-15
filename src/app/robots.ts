@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/dashboard/'],
     },
-    sitemap: 'https://axomrank.com/sitemap.xml',
+    sitemap: 'https://Angsumi.github.io/ADRE/sitemap.xml',
   };
 }

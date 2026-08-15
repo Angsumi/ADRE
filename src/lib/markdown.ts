@@ -160,9 +160,7 @@ function parseInlineMarkdown(text: string): string {
     .replace(/\[(.*?)\]\((.*?)\)/g, (match, label, href) => {
       let cleanHref = href.trim();
       // Ensure relative link uses /ADRE prefix for GitHub pages if needed
-      if (cleanHref.startsWith('https://axomrank.com')) {
-        cleanHref = cleanHref.replace('https://axomrank.com', '/ADRE');
-      } else if (cleanHref.startsWith('https://Angsumi.github.io/ADRE')) {
+      if (cleanHref.startsWith('https://Angsumi.github.io/ADRE')) {
         cleanHref = cleanHref.replace('https://Angsumi.github.io/ADRE', '/ADRE');
       } else if (cleanHref.startsWith('/') && !cleanHref.startsWith('/ADRE')) {
         cleanHref = '/ADRE' + cleanHref;
