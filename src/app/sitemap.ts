@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://angsumi.github.io/ADRE';
 
   const staticRoutes = [
-    '',
+    '/',
     '/adre/',
     '/adre/grade-3/',
     '/adre/grade-4/',
