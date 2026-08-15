@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const SITE_CONFIG = {
   name: 'AxomRank',
-  domain: 'https://Angsumi.github.io/ADRE',
+  domain: 'https://angsumi.github.io/ADRE',
   tagline: 'Prepare smarter. Rank higher.',
   description: 'Assam-first competitive-examination intelligence & preparation platform for ADRE Grade 3 & Grade 4, APSC, and Assam Police exams.',
   disclaimer: 'Notice: AxomRank is an independent digital preparation platform and is not affiliated with, endorsed by, or an official representative of the Government of Assam, State Level Recruitment Commission (SLRC), or any state board.',

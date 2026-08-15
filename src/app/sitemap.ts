@@ -4,7 +4,7 @@ import { SYLLABUS_SUBJECTS } from '@/lib/syllabusData';
 import { getAllArticles } from '@/lib/articlesData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://Angsumi.github.io/ADRE';
+  const baseUrl = 'https://angsumi.github.io/ADRE';
 
   const staticRoutes = [
     '',
