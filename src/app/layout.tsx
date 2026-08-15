@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: `${SITE_CONFIG.name} — Assam ADRE Preparation & Exam Intelligence`,
   description: SITE_CONFIG.description,
   metadataBase: new URL(SITE_CONFIG.domain),
+  verification: {
+    google: 'google444fd53ebbf78b1c',
+  },
 };
 
 export default function RootLayout({
