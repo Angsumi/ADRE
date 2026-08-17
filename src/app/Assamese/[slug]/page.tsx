@@ -161,7 +161,7 @@ export default function AssameseArticlePage({ params }: { params: { slug: string
                   href="/Assamese/"
                   className="btn-ahom-primary text-xs w-full justify-center py-3 text-center block"
                 >
-                  সকল ৪০টা অধ্যায় চাওক →
+                  সকলো ৪০ টা অধ্যায় চাওক →
                 </Link>
               </div>
             </div>
