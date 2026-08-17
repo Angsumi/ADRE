@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/document_Vault/',
     '/document_Vault/Assamese/',
     '/Assamese/',
+    '/adre/previous-year-question-paper/assamese/',
     '/assam-gk/',
     '/assam-gk/history/',
     '/current-affairs/',

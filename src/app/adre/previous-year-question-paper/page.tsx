@@ -145,29 +145,36 @@ export default function PyqVaultPage() {
         </p>
       </header>
 
-      {/* Primary Mode Switcher (PDF Downloads vs Interactive Solved Questions) */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#E5DAC8] pb-4">
-        <div className="inline-flex bg-[#EBE2D4] p-1.5 rounded-2xl border border-[#E5DAC8] w-full sm:w-auto">
-          <button
-            onClick={() => setActiveTab('DOWNLOADS')}
-            className={`px-6 py-2.5 text-xs font-mono font-bold rounded-xl flex-1 sm:flex-initial transition-all ${
-              activeTab === 'DOWNLOADS'
-                ? 'bg-[#C9A468] text-[#1D1814] shadow-md font-extrabold'
-                : 'text-[#6B5D52] hover:text-[#1D1814]'
-            }`}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[#E5DAC8] pb-4">
+          <div className="inline-flex bg-[#EBE2D4] p-1.5 rounded-2xl border border-[#E5DAC8] w-full sm:w-auto">
+            <button
+              onClick={() => setActiveTab('DOWNLOADS')}
+              className={`px-6 py-2.5 text-xs font-mono font-bold rounded-xl flex-1 sm:flex-initial transition-all ${
+                activeTab === 'DOWNLOADS'
+                  ? 'bg-[#C9A468] text-[#1D1814] shadow-md font-extrabold'
+                  : 'text-[#6B5D52] hover:text-[#1D1814]'
+              }`}
+            >
+              📥 Official PDF Downloads (10 Papers)
+            </button>
+            <button
+              onClick={() => setActiveTab('SOLVED')}
+              className={`px-6 py-2.5 text-xs font-mono font-bold rounded-xl flex-1 sm:flex-initial transition-all ${
+                activeTab === 'SOLVED'
+                  ? 'bg-[#9E3A26] text-white shadow-md font-extrabold'
+                  : 'text-[#6B5D52] hover:text-[#1D1814]'
+              }`}
+            >
+              📝 English Solved Questions (1,226)
+            </button>
+          </div>
+
+          <Link
+            href="/adre/previous-year-question-paper/assamese/"
+            className="px-5 py-2.5 bg-emerald-800 hover:bg-emerald-900 text-white rounded-xl text-xs font-mono font-bold transition-all shadow-md flex items-center space-x-2 border border-emerald-700"
           >
-            📥 Official PDF Downloads (10 Papers)
-          </button>
-          <button
-            onClick={() => setActiveTab('SOLVED')}
-            className={`px-6 py-2.5 text-xs font-mono font-bold rounded-xl flex-1 sm:flex-initial transition-all ${
-              activeTab === 'SOLVED'
-                ? 'bg-[#9E3A26] text-[#F9F4EB] shadow-md font-extrabold'
-                : 'text-[#6B5D52] hover:text-[#1D1814]'
-            }`}
-          >
-            📝 Interactive Solved Questions ({ALL_PYQ_DATA.length})
-          </button>
+            <span>অসমীয়া PYQ ভঁৰাল (1,127 Qs) →</span>
+          </Link>
         </div>
 
         {/* Year Filter Buttons */}
@@ -186,7 +193,6 @@ export default function PyqVaultPage() {
             </button>
           ))}
         </div>
-      </div>
 
       {/* TAB 1: OFFICIAL PDF DOWNLOADS SECTION */}
       {activeTab === 'DOWNLOADS' && (
