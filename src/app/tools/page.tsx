@@ -55,6 +55,14 @@ export default function ToolsIndexPage() {
       badgeColor: 'bg-[#9E3A26]/15 text-[#9E3A26]',
     },
     {
+      title: 'AxomRank Personal Document Vault',
+      description: 'Organize your Aadhaar, PAN, marksheets, PRC, and certificates into a secure 24/7 personal vault link with multi-size downloads & PDF merger.',
+      href: '/document_Vault/',
+      icon: '📂',
+      badge: '₹99 Service',
+      badgeColor: 'bg-emerald-700/15 text-emerald-800',
+    },
+    {
       title: 'Topic Practice Directory (200+ Topics)',
       description: 'Explore topic-wise question banks for Ahom Kingdom, Percentages, English Antonyms, Reasoning, and General Science.',
       href: '/adre/topics/',

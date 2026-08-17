@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { getAllTopics, getAllSubjects } from '@/lib/topicData';
 import { SYLLABUS_SUBJECTS } from '@/lib/syllabusData';
 import { getAllArticles } from '@/lib/articlesData';
+import { getAllAssameseArticles } from '@/lib/assameseArticlesData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://angsumi.github.io/ADRE';
@@ -23,6 +24,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tools/score-calculator/',
     '/tools/eligibility-checker/',
     '/tools/study-planner/',
+    '/tools/document-vault/',
+    '/document_Vault/',
+    '/document_Vault/Assamese/',
+    '/Assamese/',
     '/assam-gk/',
     '/assam-gk/history/',
     '/current-affairs/',
@@ -30,6 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const syllabusRoutes = SYLLABUS_SUBJECTS.map((s) => `/adre/syllabus/${s.slug}/`);
   const articleRoutes = getAllArticles().map((a) => a.route);
+  const assameseArticleRoutes = getAllAssameseArticles().map((a) => a.route);
 
   const topics = getAllTopics();
   const topicRoutes = topics.map((t) => `/adre/topics/${t.slug}/`);
@@ -38,7 +44,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const subjectRoutes = subjects.map((s) => `/adre/subjects/${s.slug}/`);
 
   const allRoutes = Array.from(
-    new Set([...staticRoutes, ...syllabusRoutes, ...articleRoutes, ...subjectRoutes, ...topicRoutes])
+    new Set([
+      ...staticRoutes,
+      ...syllabusRoutes,
+      ...articleRoutes,
+      ...assameseArticleRoutes,
+      ...subjectRoutes,
+      ...topicRoutes,
+    ])
   );
 
   return allRoutes.map((route) => ({

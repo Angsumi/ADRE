@@ -32,6 +32,12 @@ export function Navbar() {
       icon: '📥',
     },
     {
+      name: 'Personal Document Vault',
+      description: 'Organize documents into a 24/7 personal link with multi-size downloads.',
+      href: '/document_Vault/',
+      icon: '📂',
+    },
+    {
       name: 'All Tools Directory',
       description: 'Explore the complete master directory of all free exam utilities.',
       href: '/tools/',
@@ -59,6 +65,7 @@ export function Navbar() {
           <Link href="/adre/previous-year-question-paper/" className="hover:text-[#9E3A26] transition-colors">PYQ Vault</Link>
           <Link href="/adre/mock-test/" className="hover:text-[#9E3A26] transition-colors">Mock Tests</Link>
           <Link href="/assam-gk/" className="hover:text-[#9E3A26] transition-colors">Assam GK</Link>
+          <Link href="/Assamese/" className="hover:text-[#9E3A26] transition-colors font-bold text-[#9E3A26]">অসমীয়া ভঁৰাল</Link>
 
           {/* Tools Dropdown (Hover & Touch Support) */}
           <div
@@ -152,6 +159,7 @@ export function Footer() {
           <h4 className="text-[#211915] font-bold uppercase tracking-wider mb-4">TOOLS & TESTS</h4>
           <ul className="space-y-2.5">
             <li><Link href="/tools/" className="hover:text-[#9E3A26]">All Tools Directory</Link></li>
+            <li><Link href="/document_Vault/" className="hover:text-[#9E3A26]">Document Vault (₹99)</Link></li>
             <li><Link href="/tools/score-calculator/" className="hover:text-[#9E3A26]">Score Calculator</Link></li>
             <li><Link href="/tools/eligibility-checker/" className="hover:text-[#9E3A26]">Eligibility Checker</Link></li>
             <li><Link href="/tools/study-planner/" className="hover:text-[#9E3A26]">Study Planner</Link></li>
@@ -162,6 +170,7 @@ export function Footer() {
         <div>
           <h4 className="text-[#211915] font-bold uppercase tracking-wider mb-4">KNOWLEDGE</h4>
           <ul className="space-y-2.5">
+            <li><Link href="/Assamese/" className="hover:text-[#9E3A26] font-bold text-[#9E3A26]">অসমীয়া প্ৰস্তুতি ভঁৰাল (40+)</Link></li>
             <li><Link href="/assam-gk/" className="hover:text-[#9E3A26]">Assam GK Hub</Link></li>
             <li><Link href="/assam-gk/history/" className="hover:text-[#9E3A26]">Assam History</Link></li>
             <li><Link href="/current-affairs/" className="hover:text-[#9E3A26]">Current Affairs</Link></li>
